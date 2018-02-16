@@ -1,0 +1,13 @@
+<h1>Vista Edit</h1>
+
+<%= form_with(model: @todo, local: true) do |f| %>
+ <br><%= f.label :description %><br>
+ <%= f.text_field :description %>
+ <br>
+ <br><%= f.label :Complete %><br>
+ <%= f.check_box :completed %>
+
+ <%= f.submit :Editar %>
+<% end %>
+
+<%= link_to 'Volver', root_path %>

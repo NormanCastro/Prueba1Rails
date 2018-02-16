@@ -1,0 +1,26 @@
+<table class="table table-hover table-dark">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Completed</th>
+			<th>Accion</th>
+		</tr>	
+	</thead>
+
+	<tbody>
+
+
+		<% @todos.each do |todo| %>
+		<tr>
+			<td><%= todo.description %> </td>
+			<td><%= todo.completed %> </td>
+			<td><%= link_to 'Show', todo, class: 'btn btn-primary btn-sm' %></td>
+			<td><%= link_to 'Editar', edit_todo_path(todo.id), class: 'btn btn-success btn-sm' %></td>
+			<td><%= link_to 'Delete', destroy_todo_path(todo.id), method: :delete, class: 'btn btn-danger btn-sm' %></td>
+		</tr>
+	<% end  %>
+
+</tbody>
+<br>
+
+<%= link_to 'Crear ToDo', todos_new_path, class: 'btn btn-primary btn-sm' %>

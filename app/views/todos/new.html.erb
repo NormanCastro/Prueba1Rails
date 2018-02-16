@@ -1,0 +1,11 @@
+<h1>Vista New</h1>
+
+<%= form_with(model: @todo, local: true) do |f| %>
+ <br><%= f.label :description %><br>
+ <%= f.text_field :description %>
+<br>
+
+ <%= f.submit :Crear %>
+<% end %>
+
+<%= link_to 'Volver', root_path %>
